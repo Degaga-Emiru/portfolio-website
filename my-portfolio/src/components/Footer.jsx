@@ -1,5 +1,6 @@
 import { Link } from 'react-scroll';
 import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiFacebook } from 'react-icons/fi';
+import logo from '../assets/logo.jpg'; // adjust path as needed
 
 const Footer = () => {
   const navLinks = [
@@ -25,8 +26,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between">
           <div className="mb-8 md:mb-0">
             <div className="flex items-center mb-4">
-              <img src="/logo.png" alt="Logo" className="h-10 w-10" />
-              <span className="ml-2 text-xl font-bold">Your Name</span>
+          <img src={logo} alt="Logo" className="h-10 w-10" />
+              <span className="ml-2 text-xl font-bold">Degaga Emiru</span>
             </div>
             <p className="max-w-xs text-gray-400">
               Creating beautiful, functional websites that help businesses grow and succeed in the digital world.
@@ -72,7 +73,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} Your Name. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Degaga. All rights reserved.</p>
         </div>
       </div>
     </footer>

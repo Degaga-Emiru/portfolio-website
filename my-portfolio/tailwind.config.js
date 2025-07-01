@@ -11,6 +11,10 @@ export default {
           light: '#3b82f6',
           dark: '#60a5fa',
         },
+        text: {
+          light: '#1f2937', // gray-800
+          dark: '#f3f4f6',  // gray-100
+        },
         secondary: {
           light: '#10b981',
           dark: '#34d399',

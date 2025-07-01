@@ -14,8 +14,7 @@ function App() {
 
   return (
     <div className={`min-h-screen ${isDarkMode ? 'dark' : ''}`}>
-      <div className="bg-white dark:bg-gray-900 dark:text-gray-200">
-        <Header />
+<div className="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-colors duration-300">        <Header />
         <main>
           <Homes />
           <About />

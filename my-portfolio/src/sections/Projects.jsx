@@ -6,7 +6,7 @@ const projects = [
   {
     title: 'E-commerce Platform',
     description: 'A full-featured e-commerce platform with product listings, cart functionality, and payment processing.',
-    image: '/projects/ecommerce.jpg',
+    image: '/projects/ecommerce.jpeg',
     stack: ['React', 'Node.js', 'MongoDB', 'Stripe'],
     liveLink: 'https://example-ecommerce.com',
     githubLink: 'https://github.com/yourusername/ecommerce-platform',
@@ -14,7 +14,7 @@ const projects = [
   {
     title: 'Portfolio Website',
     description: 'A responsive portfolio website built with React and Tailwind CSS.',
-    image: '/projects/portfolio.jpg',
+    image: '/projects/portfolio.jpeg',
     stack: ['React', 'Tailwind CSS', 'Framer Motion'],
     liveLink: 'https://yourportfolio.com',
     githubLink: 'https://github.com/yourusername/portfolio',
@@ -22,7 +22,7 @@ const projects = [
   {
     title: 'Task Management App',
     description: 'A productivity app for managing tasks with drag-and-drop functionality.',
-    image: '/projects/taskapp.jpg',
+    image: '/projects/taskapp.png',
     stack: ['React', 'TypeScript', 'Firebase'],
     liveLink: 'https://taskapp.example.com',
     githubLink: 'https://github.com/yourusername/task-app',
