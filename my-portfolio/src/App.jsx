@@ -1,30 +1,34 @@
-import { useState } from 'react'
-
-import './App.css'
+import { useDarkMode } from './hooks/useDarkMode';
+import Header from './components/Header';
+import Homes from './sections/Homes';
+import About from './sections/About';
+import Services from './sections/Services';
+import Projects from './sections/Projects';
+import Testimonials from './sections/Testimonials';
+import Contact from './sections/Contact';
+import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const { isDarkMode } = useDarkMode();
 
   return (
-    <>
-       <div className="text-center p-10 bg-gradient-to-r from-purple-500 to-indigo-500 text-white">
-      <h1 className="text-4xl font-bold">Welcome to My Portfolio</h1>
-      <p className="mt-4">I'm Degaga, a Web Developer.</p>
-    </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+    <div className={`min-h-screen ${isDarkMode ? 'dark' : ''}`}>
+      <div className="bg-white dark:bg-gray-900 dark:text-gray-200">
+        <Header />
+        <main>
+          <Homes />
+          <About />
+          <Services />
+          <Projects />
+          <Testimonials />
+          <Contact />
+        </main>
+        <Footer />
+        <ScrollToTop />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
