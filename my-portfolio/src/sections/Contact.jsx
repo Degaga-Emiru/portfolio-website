@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiFacebook } from 'react-icons/fi';
+import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiFacebook, FiPhone, FiMapPin } from 'react-icons/fi';
 
 const Contact = () => {
   const formik = useFormik({
@@ -66,6 +66,7 @@ const Contact = () => {
                   type="text"
                   id="name"
                   name="name"
+                  placeholder='Your name'
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   value={formik.values.name}
@@ -84,6 +85,7 @@ const Contact = () => {
                   type="email"
                   id="email"
                   name="email"
+                  placeholder='youremail@gmail.com'
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   value={formik.values.email}
@@ -102,6 +104,7 @@ const Contact = () => {
                   type="tel"
                   id="phone"
                   name="phone"
+                  placeholder='Phone number'
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                   value={formik.values.phone}
@@ -119,6 +122,7 @@ const Contact = () => {
                 <textarea
                   id="message"
                   name="message"
+                  placeholder='write your message here'
                   rows={5}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
@@ -145,8 +149,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="md:w-1/2"
-          >
+            className="md:w-1/2" >
             <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md h-full">
               <h3 className="text-2xl font-semibold mb-6 dark:text-white">Contact Information</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-8">
@@ -170,6 +173,23 @@ const Contact = () => {
                     linkedin.com/in/yourusername
                   </a>
                 </div>
+                <div className="flex items-center">
+      <FiPhone className="text-primary-light dark:text-primary-dark mr-4" size={20} />
+      <a 
+        href="tel:+1234567890" 
+        className="dark:text-white hover:underline"
+      >
+        +1 (234) 567-890
+      </a>
+    </div>
+    <div className="flex items-start">
+      <FiMapPin className="text-primary-light dark:text-primary-dark mr-4 mt-1" size={20} />
+      <span className="dark:text-white">
+        123 Main Street<br />
+        City, State 10001<br />
+        Country
+      </span>
+    </div>
                 <div className="flex items-center">
                   <FiGithub className="text-primary-light dark:text-primary-dark mr-4" size={20} />
                   <a 

@@ -32,7 +32,7 @@ const Header = () => {
           <img src={logo} alt="Logo" className="h-10 w-10" />
           
           <span className="ml-2 text-xl font-bold dark:text-white">
-            Your Company
+            Degaga Emiru 
           </span>
         </div>
         

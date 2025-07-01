@@ -7,42 +7,42 @@ const testimonials = [
     name: 'John Doe',
     role: 'CEO at Company A',
     content: 'Working with this developer was fantastic. Delivered our project on time and exceeded expectations.',
-    image: '/testimonials/john.jpg',
+    image: '/testimonials/john.png',
     rating: 5
   },
   {
     name: 'Jane Smith',
     role: 'Marketing Director',
     content: 'The website significantly improved our online presence and customer engagement.',
-    image: '/testimonials/jane.jpg',
+    image: '/testimonials/jane.png',
     rating: 4
   },
   {
     name: 'Michael Johnson',
     role: 'Startup Founder',
     content: 'Highly skilled and professional. Understood our vision perfectly and brought it to life.',
-    image: '/testimonials/michael.jpg',
+    image: '/testimonials/michael.png',
     rating: 5
   },
   {
     name: 'Sarah Williams',
     role: 'Product Manager',
     content: 'Exceptional attention to detail and great communication throughout the project.',
-    image: '/testimonials/sarah.jpg',
+    image: '/testimonials/sarah.png',
     rating: 5
   },
   {
     name: 'David Brown',
     role: 'CTO',
     content: 'One of the best developers I\'ve worked with. Outstanding code quality and architecture.',
-    image: '/testimonials/david.jpg',
+    image: '/testimonials/david.png',
     rating: 4
   },
   {
     name: 'Emily Davis',
     role: 'UX Designer',
     content: 'Collaborated seamlessly with our design team to create a perfect user experience.',
-    image: '/testimonials/emily.jpg',
+    image: '/testimonials/emily.png',
     rating: 5
   }
 ];
