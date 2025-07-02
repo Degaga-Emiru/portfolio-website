@@ -1,16 +1,16 @@
 // eslint-disable-next-line no-unused-vars
-// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiFacebook, FiPhone, FiMapPin } from 'react-icons/fi';
 import emailjs from 'emailjs-com';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const Contact = () => {
-  const [submitStatus, setSubmitStatus] = useState({
-    isSuccess: false,
-    message: ''
+  const [notification, setNotification] = useState({
+    show: false,
+    message: '',
+    isSuccess: false
   });
 
   const formik = useFormik({
@@ -39,31 +39,36 @@ const Contact = () => {
         message: values.message
       }, userId)
         .then(() => {
-          setSubmitStatus({
-            isSuccess: true,
-            message: 'Thank you for contacting me! I will get back to you soon.'
+          setNotification({
+            show: true,
+            message: 'Thank you for contacting me! I will get back to you soon.',
+            isSuccess: true
           });
           resetForm();
         })
         .catch((error) => {
-          setSubmitStatus({
-            isSuccess: false,
-            message: 'Something went wrong. Please try again later.'
+          setNotification({
+            show: true,
+            message: 'Something went wrong. Please try again later.',
+            isSuccess: false
           });
           console.error('Email sending failed:', error);
         })
         .finally(() => {
           setSubmitting(false);
-          // Clear the message after 5 seconds
-          setTimeout(() => {
-            setSubmitStatus({
-              isSuccess: false,
-              message: ''
-            });
-          }, 5000);
         });
     },
   });
+
+  // Auto-hide notification after 5 seconds
+  useEffect(() => {
+    if (notification.show) {
+      const timer = setTimeout(() => {
+        setNotification(prev => ({ ...prev, show: false }));
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [notification.show]);
 
   const socialLinks = [
     { icon: <FiGithub size={24} />, url: 'https://github.com/Degaga-Emiru' },
@@ -75,6 +80,23 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900">
+      {/* Notification pop-down */}
+      {notification.show && (
+        <motion.div
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.3 }}
+          className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 px-6 py-3 rounded-md shadow-lg ${
+            notification.isSuccess 
+              ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' 
+              : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
+          }`}
+        >
+          {notification.message}
+        </motion.div>
+      )}
+
       <div className="container mx-auto px-6">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
@@ -94,12 +116,6 @@ const Contact = () => {
             viewport={{ once: true }}
             className="md:w-1/2"
           >
-            {submitStatus.message && (
-              <div className={`mb-6 p-4 rounded-lg ${submitStatus.isSuccess ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'}`}>
-                {submitStatus.message}
-              </div>
-            )}
-            
             <form onSubmit={formik.handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block mb-2 text-sm font-medium dark:text-white">
@@ -177,7 +193,7 @@ const Contact = () => {
                 ) : null}
               </div>
               
-                     <button
+              <button
                 type="submit"
                 disabled={formik.isSubmitting}
                 className="px-6 py-3 bg-primary-light dark:bg-primary-dark text-white rounded-lg hover:bg-opacity-90 transition-all disabled:opacity-50"
@@ -217,20 +233,20 @@ const Contact = () => {
                   </a>
                 </div>
                 <div className="flex items-center">
-      <FiPhone className="text-primary-light dark:text-primary-dark mr-4" size={20} />
-      <a 
-        href="tel:+1234567890" 
-        className="dark:text-white hover:underline"
-      >
-        +251943091493
-      </a>
-    </div>
-    <div className="flex items-start">
-      <FiMapPin className="text-primary-light dark:text-primary-dark mr-4 mt-1" size={20} />
-      <span className="dark:text-white">
-        Ayat, Addis Ababa,Ethiopia
-      </span>
-    </div>
+                  <FiPhone className="text-primary-light dark:text-primary-dark mr-4" size={20} />
+                  <a 
+                    href="tel:+251943091493" 
+                    className="dark:text-white hover:underline"
+                  >
+                    +251943091493
+                  </a>
+                </div>
+                <div className="flex items-start">
+                  <FiMapPin className="text-primary-light dark:text-primary-dark mr-4 mt-1" size={20} />
+                  <span className="dark:text-white">
+                    Ayat, Addis Ababa, Ethiopia
+                  </span>
+                </div>
                 <div className="flex items-center">
                   <FiGithub className="text-primary-light dark:text-primary-dark mr-4" size={20} />
                   <a 
