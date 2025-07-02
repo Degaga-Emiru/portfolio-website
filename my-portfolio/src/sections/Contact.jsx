@@ -81,21 +81,21 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-900">
       {/* Notification pop-down */}
-      {notification.show && (
-        <motion.div
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -50 }}
-          transition={{ duration: 0.3 }}
-          className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 px-6 py-3 rounded-md shadow-lg ${
-            notification.isSuccess 
-              ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' 
-              : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
-          }`}
-        >
-          {notification.message}
-        </motion.div>
-      )}
+     {notification.show && (
+  <motion.div
+    initial={{ opacity: 0, y: -50 }}
+    animate={{ opacity: 1, y: 0 }}
+    exit={{ opacity: 0, y: -50 }}
+    transition={{ duration: 0.3 }}
+    className={`fixed top-4 left-1/2 transform -translate-x-1/2 z-50 px-6 py-3 rounded-md shadow-lg text-center font-bold ${
+      notification.isSuccess 
+        ? 'bg-green-500 text-white dark:bg-green-600' 
+        : 'bg-red-500 text-white dark:bg-red-600'
+    }`}
+  >
+    {notification.message}
+  </motion.div>
+)}
 
       <div className="container mx-auto px-6">
         <motion.h2 
