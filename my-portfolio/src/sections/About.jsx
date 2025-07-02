@@ -42,9 +42,32 @@ const About = () => {
     { value: '310+', label: 'Github Contributions', icon: <FiGithub className="text-2xl" />, color: 'bg-yellow-100 dark:bg-yellow-900' }
   ];
 
-  return (
+   return (
     <section id="about" className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-6">
+        {/* Mobile: About Me content above profile image */}
+        <div className="block lg:hidden mb-8">
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold mb-4 dark:text-white"
+          >
+            About <span className="text-primary-light dark:text-primary-dark">Me</span>
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="text-lg text-gray-600 dark:text-gray-400 mb-6"
+          > I am a Computer Science Student and Full-stack  developer specializing in building modern, dynamic, and AI-driven websites that excel in both problem-solving and user experience.Explore my journey in technology,  from academic foundations to practical applications, 
+            as I bridge theory with real-world solutions through continuous learning and innovation.
+          </motion.p>
+        </div>
+
         <div className="flex flex-col lg:flex-row gap-12">
           {/* Left Column - Photo & Personal Info */}
           <motion.div 
@@ -52,7 +75,7 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="lg:w-1/3"
+            className="lg:w-1/3 order-2 lg:order-1" // Changed order for mobile
           >
             <div className="relative h-96 w-full rounded-xl overflow-hidden shadow-lg">
               <img 
@@ -65,34 +88,38 @@ const About = () => {
             <div className="mt-8">
               <h3 className="text-2xl font-bold mb-4 dark:text-white">What Drives Me</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                I’m passionate about creating solutions that make a real difference, whether through AI-driven applications or responsive, user-friendly web designs. My drive comes from a commitment to constant growth – the excitement of learning new technologies, tackling complex problems, and contributing to projects that push boundaries. 
-                I’m always eager to collaborate and share my expertise, and I’m dedicated to delivering high-quality work that exceeds expectations.
+                I’m passionate about creating solutions that make a real difference, whether through AI-driven applications or responsive, user-friendly web designs. My drive comes from a commitment to constant growth – the excitement of learning new technologies, tackling complex problems, and contributing to projects that push boundaries. I’m always eager to collaborate and share my expertise, 
+                and I’m dedicated to delivering high-quality work that exceeds expectations.
               </p>
             </div>
           </motion.div>
 
           {/* Right Column - Content */}
-          <div className="lg:w-2/3">
-            <motion.h2 
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-              className="text-3xl md:text-4xl font-bold mb-8 dark:text-white"
-            >
-              About <span className="text-primary-light dark:text-primary-dark">Me</span>
-            </motion.h2>
-                 {/* Added new paragraph below the heading */}
-            <motion.p
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="text-lg text-gray-600 dark:text-gray-400 mb-8" >
-             Passionate Developer and Lifelong Learner.
-A fast learner and team player, 
-I’m always eager to embrace new technologies and collaborate to achieve shared goals.
-            </motion.p>
+          <div className="lg:w-2/3 order-1 lg:order-2"> {/* Changed order for mobile */}
+            {/* Desktop: About Me content stays here */}
+            <div className="hidden lg:block">
+              <motion.h2 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                viewport={{ once: true }}
+                className="text-3xl md:text-4xl font-bold mb-4 dark:text-white"
+              >
+                About <span className="text-primary-light dark:text-primary-dark">Me</span>
+              </motion.h2>
+
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="text-lg text-gray-600 dark:text-gray-400 mb-8"
+              >
+                Explore my journey in technology, from academic foundations to practical applications, 
+                as I bridge theory with real-world solutions through continuous learning and innovation.
+              </motion.p>
+            </div>
+
             {/* Stats Cards */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
               {stats.map((stat, index) => (
