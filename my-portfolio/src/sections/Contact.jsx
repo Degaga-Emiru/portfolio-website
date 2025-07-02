@@ -1,10 +1,18 @@
 // eslint-disable-next-line no-unused-vars
+// eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiFacebook, FiPhone, FiMapPin } from 'react-icons/fi';
+import emailjs from 'emailjs-com';
+import { useState } from 'react';
 
 const Contact = () => {
+  const [submitStatus, setSubmitStatus] = useState({
+    isSuccess: false,
+    message: ''
+  });
+
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -19,12 +27,41 @@ const Contact = () => {
       message: Yup.string().required('Required').min(10, 'Message must be at least 10 characters'),
     }),
     onSubmit: (values, { setSubmitting, resetForm }) => {
-      setTimeout(() => {
-        alert(JSON.stringify(values, null, 2));
-        setSubmitting(false);
-        resetForm();
-        alert('Thank you for contacting us! We will reply to your message soon.');
-      }, 400);
+      // Replace these with your actual EmailJS service ID, template ID, and user ID
+      const serviceId = 'service_0jk5z3j';
+      const templateId = 'template_gejn5sa'; 
+      const userId = 'Qm5-MkLlXv5hLQDQA';
+      
+      emailjs.send(serviceId, templateId, {
+        from_name: values.name,
+        from_email: values.email,
+        phone: values.phone,
+        message: values.message
+      }, userId)
+        .then(() => {
+          setSubmitStatus({
+            isSuccess: true,
+            message: 'Thank you for contacting me! I will get back to you soon.'
+          });
+          resetForm();
+        })
+        .catch((error) => {
+          setSubmitStatus({
+            isSuccess: false,
+            message: 'Something went wrong. Please try again later.'
+          });
+          console.error('Email sending failed:', error);
+        })
+        .finally(() => {
+          setSubmitting(false);
+          // Clear the message after 5 seconds
+          setTimeout(() => {
+            setSubmitStatus({
+              isSuccess: false,
+              message: ''
+            });
+          }, 5000);
+        });
     },
   });
 
@@ -57,6 +94,12 @@ const Contact = () => {
             viewport={{ once: true }}
             className="md:w-1/2"
           >
+            {submitStatus.message && (
+              <div className={`mb-6 p-4 rounded-lg ${submitStatus.isSuccess ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'}`}>
+                {submitStatus.message}
+              </div>
+            )}
+            
             <form onSubmit={formik.handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block mb-2 text-sm font-medium dark:text-white">
@@ -134,7 +177,7 @@ const Contact = () => {
                 ) : null}
               </div>
               
-              <button
+                     <button
                 type="submit"
                 disabled={formik.isSubmitting}
                 className="px-6 py-3 bg-primary-light dark:bg-primary-dark text-white rounded-lg hover:bg-opacity-90 transition-all disabled:opacity-50"
