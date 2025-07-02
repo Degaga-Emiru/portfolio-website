@@ -24,8 +24,11 @@ const Homes = () => {
             <Typewriter words={professions} />
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-            I'm a passionate web developer with expertise in creating modern, responsive, 
-            and user-friendly websites. I love turning ideas into reality through code.
+            I am a Computer Science student, web designer, and full-stack developer with a passion for building modern, responsive, 
+            and AI-powered websites. I specialize in creating dynamic user experiences and solving real-world problems through clean, 
+            efficient code and seamless UI/UX design. My skillset spans both front-end and back-end development, as well as networking fundamentals. 
+            I’m always eager to collaborate and help bring your ideas to life with scalable, high-performance web solutions. 
+            I love turning ideas into reality through code.
           </p>
           <div className="flex space-x-4">
             <Link
