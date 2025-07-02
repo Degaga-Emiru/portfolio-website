@@ -4,44 +4,44 @@ import { FiStar } from 'react-icons/fi';
 
 const testimonials = [
   {
-    name: 'John Doe',
-    role: 'CEO at Company A',
-    content: 'Working with this developer was fantastic. Delivered our project on time and exceeded expectations.',
-    image: '/testimonials/john.png',
+    name: 'Bonsa Saka',
+    role: 'CEO at Bonsa General Treading PLC',
+   content: 'Working with Degaga was a smooth and rewarding experience. His communication was clear, timely, and professional throughout the project. He truly understood our goals and delivered with precision. Highly recommend him for any web development needs.',
+    image: '/testimonials/bonsa.jpg',
     rating: 5
   },
   {
-    name: 'Jane Smith',
-    role: 'Marketing Director',
-    content: 'The website significantly improved our online presence and customer engagement.',
-    image: '/testimonials/jane.png',
-    rating: 4
-  },
-  {
-    name: 'Michael Johnson',
-    role: 'Startup Founder',
-    content: 'Highly skilled and professional. Understood our vision perfectly and brought it to life.',
-    image: '/testimonials/michael.png',
+    name: 'Chala Saka',
+    role: 'Full Stack Developer',
+    content: 'Working with Degaga is always a pleasure. His problem-solving skills are top-notch, and he always finds elegant solutions to complex challenges. The project was completed ahead of schedule with impressive quality. He’s a dependable developer.',
+    image: '/testimonials/chala.jpg',
     rating: 5
   },
   {
-    name: 'Sarah Williams',
-    role: 'Product Manager',
+    name: 'Sisay Wolde',
+    role: 'Software Engineer',
+    content: 'From concept to deployment, Degaga showed outstanding attention to detail. His ability to translate abstract ideas into functional features was impressive. A proactive communicator and reliable team player.',
+    image: '/testimonials/sisay-wolde.jpg',
+    rating: 5
+  },
+  {
+    name: 'Firaol Adimasu',
+    role: 'Software Developer',
     content: 'Exceptional attention to detail and great communication throughout the project.',
-    image: '/testimonials/sarah.png',
+    image: '/testimonials/fira.jpg',
     rating: 5
   },
   {
-    name: 'David Brown',
-    role: 'CTO',
+    name: 'Dawit Paulos',
+    role: 'AI Engineer & Entrepreneur',
     content: 'One of the best developers I\'ve worked with. Outstanding code quality and architecture.',
-    image: '/testimonials/david.png',
-    rating: 4
+    image: '/testimonials/dawit-paulos.jpg',
+    rating: 5
   },
   {
-    name: 'Emily Davis',
+    name: 'Timothy Paul',
     role: 'UX Designer',
-    content: 'Collaborated seamlessly with our design team to create a perfect user experience.',
+    content: 'Collaborating with Degaga felt more like working with a product partner than just a developer. He cared deeply about the success of our project and brought valuable ideas to the table. Excellent coding and UX sense.',
     image: '/testimonials/emily.png',
     rating: 5
   }
