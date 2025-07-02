@@ -29,11 +29,11 @@ const Contact = () => {
   });
 
   const socialLinks = [
-    { icon: <FiGithub size={24} />, url: 'https://github.com/yourusername' },
-    { icon: <FiLinkedin size={24} />, url: 'https://linkedin.com/in/yourusername' },
-    { icon: <FiTwitter size={24} />, url: 'https://twitter.com/yourusername' },
-    { icon: <FiMail size={24} />, url: 'mailto:your.email@example.com' },
-    { icon: <FiFacebook size={24} />, url: 'https://facebook.com/yourusername' },
+    { icon: <FiGithub size={24} />, url: 'https://github.com/Degaga-Emiru' },
+    { icon: <FiLinkedin size={24} />, url: 'https://linkedin.com/in/degaga-emiru996' },
+    { icon: <FiTwitter size={24} />, url: 'https://twitter.com/Degaga_Emiru' },
+    { icon: <FiMail size={24} />, url: 'mailto:degagaemiru@gmail.com' },
+    { icon: <FiFacebook size={24} />, url: 'https://facebook.com/degagasiwayyee' },
   ];
 
   return (
@@ -160,17 +160,17 @@ const Contact = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <FiMail className="text-primary-light dark:text-primary-dark mr-4" size={20} />
-                  <span className="dark:text-white">your.email@example.com</span>
+                  <span className="dark:text-white">degagaemiru@gmail.com</span>
                 </div>
                 <div className="flex items-center">
                   <FiLinkedin className="text-primary-light dark:text-primary-dark mr-4" size={20} />
                   <a 
-                    href="https://linkedin.com/in/yourusername" 
+                    href="https://linkedin.com/in/degaga-emiru996" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="dark:text-white hover:underline"
                   >
-                    linkedin.com/in/yourusername
+                    linkedin.com/in/degaga-emiru996
                   </a>
                 </div>
                 <div className="flex items-center">
@@ -179,26 +179,24 @@ const Contact = () => {
         href="tel:+1234567890" 
         className="dark:text-white hover:underline"
       >
-        +1 (234) 567-890
+        +251943091493
       </a>
     </div>
     <div className="flex items-start">
       <FiMapPin className="text-primary-light dark:text-primary-dark mr-4 mt-1" size={20} />
       <span className="dark:text-white">
-        123 Main Street<br />
-        City, State 10001<br />
-        Country
+        Ayat, Addis Ababa,Ethiopia
       </span>
     </div>
                 <div className="flex items-center">
                   <FiGithub className="text-primary-light dark:text-primary-dark mr-4" size={20} />
                   <a 
-                    href="https://github.com/yourusername" 
+                    href="https://github.com/Degaga-Emiru" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="dark:text-white hover:underline"
                   >
-                    github.com/yourusername
+                    github.com/Degaga-Emiru
                   </a>
                 </div>
               </div>

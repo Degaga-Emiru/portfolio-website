@@ -12,11 +12,11 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: <FiGithub size={20} />, url: 'https://github.com/yourusername' },
-    { icon: <FiLinkedin size={20} />, url: 'https://linkedin.com/in/yourusername' },
-    { icon: <FiTwitter size={20} />, url: 'https://twitter.com/yourusername' },
-    { icon: <FiMail size={20} />, url: 'mailto:your.email@example.com' },
-    { icon: <FiFacebook size={20} />, url: 'https://facebook.com/yourusername' },
+    { icon: <FiGithub size={20} />, url: 'https://github.com/Degaga-Emiru' },
+    { icon: <FiLinkedin size={20} />, url: 'https://linkedin.com/in/degaga-emiru996' },
+    { icon: <FiTwitter size={20} />, url: 'https://twitter.com/Degaga_Emiru' },
+    { icon: <FiMail size={20} />, url: 'mailto:degagaemiru@gmail.com' },
+    { icon: <FiFacebook size={20} />, url: 'https://facebook.com/degagasiwayyee' },
   ];
 
   return (
