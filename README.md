@@ -33,5 +33,4 @@ npm start
 Feel free to reach out via the Contact section on the site.
 
 ---
-
-Let me know if you want to include deployment instructions or add badges (like Netlify or Vercel).
+live demo http://degaga-tech.vercel.app
