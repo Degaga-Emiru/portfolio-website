@@ -1,6 +1,5 @@
-Here's a short and clear `README.md` text for your portfolio website built with React.js and Tailwind CSS:
+My  portfolio website built with React.js and Tailwind CSS:
 
----
 
 # 💼 Personal Portfolio Website
 
@@ -17,8 +16,8 @@ This is my personal portfolio website built using **React.js** and **Tailwind CS
 
 * **React.js**
 * **Tailwind CSS**
-* **React Router** (if used)
-* **EmailJS** (for contact form, if used)
+* **React Router**
+* **EmailJS**
 
 ## 📦 Installation
 
@@ -34,5 +33,4 @@ npm start
 Feel free to reach out via the Contact section on the site.
 
 ---
-
-Let me know if you want to include deployment instructions or add badges (like Netlify or Vercel).
+live demo http://degaga-tech.vercel.app
