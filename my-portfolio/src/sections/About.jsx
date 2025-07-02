@@ -25,14 +25,15 @@ const About = () => {
   ];
 
   const education = [
-    'BSc Computer Science - Addis Ababa University (2022-2026)',
-    'ALX Software Engineering Program (2023)'
+    'BSc Computer Science - Hawassa University (2023-now)',
+    'ALX Front End Engineering Program (2025)'
   ];
 
   const certifications = [
-    'Frontend Development Certification - Coursera',
+    'Frontend Development Certification - ALX africa',
     'JavaScript Algorithms Certification - freeCodeCamp',
-    'AWS Cloud Practitioner - Amazon Web Services'
+    'AWS Cloud Practitioner - Amazon Web Services',
+    'Data Analyst -Udacity'
   ];
 
   const stats = [
