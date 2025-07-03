@@ -64,7 +64,7 @@ const About = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
             className="text-lg text-gray-600 dark:text-gray-400 mb-6"
-          > I am a Computer Science Student and Full-stack  developer specializing in building modern, dynamic, and AI-driven websites that excel in both problem-solving and user experience.Explore my journey in technology,  from academic foundations to practical applications, 
+          >  Full-stack  developer specializing in building modern, dynamic, and AI-driven websites that excel in both problem-solving and user experience.Explore my journey in technology,  from academic foundations to practical applications, 
             as I bridge theory with real-world solutions through continuous learning and innovation.
           </motion.p>
         </div>
