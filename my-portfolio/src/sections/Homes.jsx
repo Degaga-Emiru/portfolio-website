@@ -42,12 +42,14 @@ const Homes = () => {
     Contact Me
   </Link>
             <a
-    href={resume}
-    download="Degaga_Emiru_resume.pdf"
-    className="px-6 py-3 border border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark rounded-lg hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark dark:hover:text-white hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
-  >
-    Download Resume
-  </a>
+  href={resume}
+  download="Degaga_Emiru_resume.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="px-6 py-3 border border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark rounded-lg hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark dark:hover:text-white hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
+>
+  Download Resume
+</a>
           </div>
         </motion.div>
         
