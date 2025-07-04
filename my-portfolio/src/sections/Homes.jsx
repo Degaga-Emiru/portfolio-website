@@ -32,22 +32,22 @@ const Homes = () => {
           </p>
           <div className="flex space-x-4">
             <Link
-              to="contact"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-              className="px-6 py-3 bg-primary-light dark:bg-primary-dark text-white rounded-lg hover:bg-opacity-90 transition-all"
-            >
-              Contact Me
-            </Link>
+    to="contact"
+    spy={true}
+    smooth={true}
+    offset={-70}
+    duration={500}
+    className="px-6 py-3 bg-primary-light dark:bg-primary-dark text-white rounded-lg hover:bg-primary dark:hover:bg-primary-dark hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
+  >
+    Contact Me
+  </Link>
             <a
-              href={resume}
-              download="Degaga_Emiru_resume.pdf"
-              className="px-6 py-3 border border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-all"
-            >
-              Download Resume
-            </a>
+    href={resume}
+    download="Degaga_Emiru_resume.pdf"
+    className="px-6 py-3 border border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark rounded-lg hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark dark:hover:text-white hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
+  >
+    Download Resume
+  </a>
           </div>
         </motion.div>
         
