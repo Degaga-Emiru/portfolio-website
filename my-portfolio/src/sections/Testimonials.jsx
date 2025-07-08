@@ -40,9 +40,9 @@ const testimonials = [
   },
   {
     name: 'Timothy Paul',
-    role: 'UX Designer',
+    role: 'Graphics Designer, UI/UX Designer',
     content: 'Collaborating with Degaga felt more like working with a product partner than just a developer. He cared deeply about the success of our project and brought valuable ideas to the table. Excellent coding and UX sense.',
-    image: '/testimonials/emily.png',
+    image: '/testimonials/timothy.jpg',
     rating: 5
   }
 ];
