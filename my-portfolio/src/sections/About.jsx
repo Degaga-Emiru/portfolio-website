@@ -40,7 +40,7 @@ const About = () => {
     { value: '2+', label: 'Years Experience', icon: <FiBriefcase className="text-2xl" />, color: 'bg-blue-100 dark:bg-blue-900' },
     { value: '20+', label: 'Projects Completed', icon: <FiCode className="text-2xl" />, color: 'bg-purple-100 dark:bg-purple-900' },
     { value: '10+', label: 'Certifications', icon: <FiAward className="text-2xl" />, color: 'bg-green-100 dark:bg-green-900' },
-    { value: '310+', label: 'Github Contributions', icon: <FiGithub className="text-2xl" />, color: 'bg-yellow-100 dark:bg-yellow-900' }
+    { value: '413+', label: 'Github Contributions', icon: <FiGithub className="text-2xl" />, color: 'bg-yellow-100 dark:bg-yellow-900' }
   ];
 
    return (
