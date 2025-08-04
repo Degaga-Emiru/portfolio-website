@@ -2,7 +2,7 @@ import { useState } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { FaReact, FaNodeJs, FaCss3Alt } from 'react-icons/fa';
-import { SiTailwindcss, SiTypescript, SiDjango } from 'react-icons/si';
+import { SiTailwindcss, SiTypescript, SiDjango, SiSpring} from 'react-icons/si';
 import { FiAward, FiCode, FiGithub, FiBriefcase,FiMessageSquare } from 'react-icons/fi';
 import { Link } from 'react-scroll';
 
@@ -15,14 +15,16 @@ const About = () => {
     { id: 'certifications', label: 'Certifications' }
   ];
 
-  const skills = [
+const skills = [
     { name: 'React', icon: <FaReact className="text-blue-500" size={24} /> },
     { name: 'Node.js', icon: <FaNodeJs className="text-green-500" size={24} /> },
     { name: 'TypeScript', icon: <SiTypescript className="text-blue-600" size={24} /> },
     { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-cyan-400" size={24} /> },
     { name: 'CSS3', icon: <FaCss3Alt className="text-blue-400" size={24} /> },
     { name: 'Django', icon: <SiDjango className="text-green-700" size={24} /> },
-  ];
+    { name: 'Spring Boot', icon: <SiSpring className="text-green-500" size={24} /> },
+    { name: 'Spring Framework', icon: <SiSpring className="text-green-600" size={24} /> },
+];
 
   const education = [
     'BSc Computer Science - Hawassa University (2023-now)',
