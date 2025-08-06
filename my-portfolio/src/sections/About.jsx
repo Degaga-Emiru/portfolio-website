@@ -2,7 +2,7 @@ import { useState } from 'react';
 // eslint-disable-next-line no-unused-vars
 import { motion } from 'framer-motion';
 import { FaReact, FaNodeJs, FaCss3Alt } from 'react-icons/fa';
-import { SiTailwindcss, SiTypescript, SiDjango, SiSpring} from 'react-icons/si';
+import { SiTailwindcss, SiTypescript, SiDjango, SiSpring,SiMongodb, SiPostgresql, SiMysql} from 'react-icons/si';
 import { FiAward, FiCode, FiGithub, FiBriefcase,FiMessageSquare } from 'react-icons/fi';
 import { Link } from 'react-scroll';
 
@@ -24,6 +24,9 @@ const skills = [
     { name: 'Django', icon: <SiDjango className="text-green-700" size={24} /> },
     { name: 'Spring Boot', icon: <SiSpring className="text-green-500" size={24} /> },
     { name: 'Spring Framework', icon: <SiSpring className="text-green-600" size={24} /> },
+    { name: 'MongoDB', icon: <SiMongodb className="text-green-600" size={24} /> },
+    { name: 'PostgreSQL', icon: <SiPostgresql className="text-blue-800" size={24} /> },
+    { name: 'MySQL', icon: <SiMysql className="text-blue-500" size={24} /> },
 ];
 
   const education = [
