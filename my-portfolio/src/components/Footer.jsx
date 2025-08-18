@@ -10,6 +10,7 @@ const Footer = () => {
     { name: 'Testimonials', to: 'testimonials' },
     { name: 'Contact', to: 'contact' },
   ];
+  // this is footer that appear on my portfolio website
 
   const socialLinks = [
     { icon: <FiGithub size={20} />, url: 'https://github.com/Degaga-Emiru' },
