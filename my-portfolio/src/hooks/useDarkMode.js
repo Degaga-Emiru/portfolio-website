@@ -1,4 +1,5 @@
 // src/hooks/useDarkMode.js
+// this is hooks that manage my website 
 import { useEffect, useState } from 'react';
 
 export const useDarkMode = () => {
