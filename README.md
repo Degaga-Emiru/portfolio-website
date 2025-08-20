@@ -30,7 +30,7 @@ npm start
 
 ## 📬 Contact
 
-Feel free to reach out via the Contact section on the site.
+Feel free to reach out via the Contact section on the site. I love to hear your comment please 😊 
 
 ---
 live demo http://degaga-tech.vercel.app
