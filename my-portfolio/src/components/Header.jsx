@@ -1,5 +1,7 @@
 import { useState } from 'react';
 // eslint-disable-next-line no-unused-vars
+
+// this is the header of my Portfolio website so it contains navbar menu mobile menu butoon
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import DarkModeToggle from './DarkModeToggle';
