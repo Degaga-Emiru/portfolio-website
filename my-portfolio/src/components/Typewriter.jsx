@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
-
+//this type written  that written by self 
 const Typewriter = ({ 
   words, 
   typingSpeed = 150, 
