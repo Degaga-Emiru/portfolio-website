@@ -1,7 +1,8 @@
-// src/hooks/useDarkMode.js
-import { useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 
-export const useDarkMode = () => {
+const ThemeContext = createContext();
+
+export const ThemeProvider = ({ children }) => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     // Default to dark mode (true) if no preference exists
     if (typeof window !== 'undefined') {
@@ -23,8 +24,14 @@ export const useDarkMode = () => {
   }, [isDarkMode]);
 
   const toggleDarkMode = () => {
-    setIsDarkMode(prev => !prev);
+    setIsDarkMode((prev) => !prev);
   };
 
-  return { isDarkMode, toggleDarkMode };
+  return (
+    <ThemeContext.Provider value={{ isDarkMode, toggleDarkMode }}>
+      {children}
+    </ThemeContext.Provider>
+  );
 };
+
+export const useTheme = () => useContext(ThemeContext);

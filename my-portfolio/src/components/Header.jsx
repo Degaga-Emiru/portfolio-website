@@ -3,20 +3,23 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import DarkModeToggle from './DarkModeToggle';
-import { useDarkMode } from '../hooks/useDarkMode';
+import { useTheme } from '../context/ThemeContext';
 import { FiMenu, FiX } from 'react-icons/fi';
 import logo from '../assets/logo.jpg'; // adjust path as needed
 const navLinks = [
   { name: 'Home', to: 'home' },
   { name: 'About', to: 'about' },
+  { name: 'Skills', to: 'skills' },
+  { name: 'Experience', to: 'experience' },
   { name: 'Services', to: 'services' },
   { name: 'Projects', to: 'projects' },
+  { name: 'Blog', to: 'blog' },
   { name: 'Testimonials', to: 'testimonials' },
   { name: 'Contact', to: 'contact' },
 ];
 
 const Header = () => {
-  const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const { isDarkMode, toggleDarkMode } = useTheme();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (

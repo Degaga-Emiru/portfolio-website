@@ -2,6 +2,8 @@
 import { motion } from 'framer-motion';
 import Typewriter from '../components/Typewriter';
 import { Link } from 'react-scroll';
+import { FiGithub, FiMail } from 'react-icons/fi';
+import { FaTelegramPlane } from 'react-icons/fa';
 import resume from '../assets/Degaga_Emiru_resume.pdf';
 import profileImage from '../assets/images/profile.jpg'; // adjust path based on your file location
 
@@ -30,27 +32,57 @@ const Homes = () => {
             I’m always eager to collaborate and help bring your ideas to life with scalable, high-performance web solutions. 
             I love turning ideas into reality through code.
           </p>
-          <div className="flex space-x-4">
+          
+          <div className="flex flex-wrap gap-4 mb-8">
             <Link
-    to="contact"
-    spy={true}
-    smooth={true}
-    offset={-70}
-    duration={500}
-    className="px-6 py-3 bg-primary-light dark:bg-primary-dark text-white rounded-lg hover:bg-primary dark:hover:bg-primary-dark hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
-  >
-    Contact Me
-  </Link>
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
+              className="px-8 py-3 bg-primary-light dark:bg-primary-dark text-white rounded-lg hover:bg-blue-600 dark:hover:bg-blue-500 hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out cursor-pointer font-medium"
+            >
+              Hire Me
+            </Link>
             <a
-  href={resume}
-  download="Degaga_Emiru_resume.pdf"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="px-6 py-3 border border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark rounded-lg hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark dark:hover:text-white hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
->
-  Download Resume
-</a>
+              href={resume}
+              download="Degaga_Emiru_resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 border-2 border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark rounded-lg hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark dark:hover:text-white hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out font-medium"
+            >
+              Download Resume
+            </a>
           </div>
+
+          <div className="flex items-center space-x-6">
+            <a 
+              href="https://github.com/Degaga-Emiru" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-primary-light dark:text-gray-400 dark:hover:text-primary-dark transition-colors transform hover:scale-110"
+              aria-label="GitHub"
+            >
+              <FiGithub size={28} />
+            </a>
+            <a 
+              href="https://t.me/yourtelegramusername" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-gray-600 hover:text-[#0088cc] dark:text-gray-400 dark:hover:text-[#0088cc] transition-colors transform hover:scale-110"
+              aria-label="Telegram"
+            >
+              <FaTelegramPlane size={28} />
+            </a>
+            <a 
+              href="mailto:youremail@example.com" 
+              className="text-gray-600 hover:text-red-500 dark:text-gray-400 dark:hover:text-red-400 transition-colors transform hover:scale-110"
+              aria-label="Email"
+            >
+              <FiMail size={28} />
+            </a>
+          </div>
+
         </motion.div>
         
         <motion.div 
@@ -59,13 +91,12 @@ const Homes = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="md:w-1/2 flex justify-center"
         >
-          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary-light dark:border-primary-dark">
+          <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary-light dark:border-primary-dark shadow-xl hover:shadow-primary-light/50 transition-shadow duration-300">
             <img 
-  src={profileImage} 
-  alt="Profile" 
-  className="w-full h-full object-cover"
-/>
-
+              src={profileImage} 
+              alt="Profile" 
+              className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+            />
           </div>
         </motion.div>
       </div>
