@@ -11,7 +11,7 @@ import Testimonials from './sections/Testimonials';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-
+// this is the app js that control all things the router and etc 
 function App() {
   return (
     <div className="min-h-screen">
@@ -53,5 +53,5 @@ function App() {
     </div>
   );
 }
-
+// this is by default exported 
 export default App;

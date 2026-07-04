@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { FiGithub, FiExternalLink } from 'react-icons/fi';
-
+//this section contain my projects of what i did 
 const ProjectCard = ({ 
   title, 
   description, 
