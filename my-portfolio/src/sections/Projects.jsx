@@ -18,7 +18,7 @@ const projectsData = [
   {
     title: 'Unifix Mobile Application',
     description: 'A mobile application that allows students to report university maintenance issues, track progress, and have problems fixed simply and easily.',
-    image: '/projects/unifix.jpg',
+    image: '/projects/unifix_app_mockup.png',
     stack: ['React Native', 'Node.js', 'Express', 'MongoDB'],
     liveLink: '#',
     githubLink: 'https://github.com/Degaga-Emiru/Unifix-Mobile-app',

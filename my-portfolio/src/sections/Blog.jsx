@@ -12,7 +12,7 @@ const articlesData = [
     date: 'Oct 15, 2025',
     readTime: 5,
     tags: ['Architecture', 'Django', 'Next.js'],
-    image: '/projects/justicehub.jpg' // Using project images as placeholders
+    image: '/projects/justicehub.png' // Using project images as placeholders
   },
   {
     id: 2,
@@ -22,7 +22,7 @@ const articlesData = [
     date: 'Nov 02, 2025',
     readTime: 7,
     tags: ['React', 'State Management', 'Frontend'],
-    image: '/projects/book-library.jpg'
+    image: '/projects/portfolio.jpg'
   },
   {
     id: 3,
@@ -32,7 +32,7 @@ const articlesData = [
     date: 'Jan 12, 2026',
     readTime: 6,
     tags: ['React Native', 'Mobile', 'Performance'],
-    image: '/projects/unifix.jpg'
+    image: '/projects/taskapp.png'
   }
 ];
 
