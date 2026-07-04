@@ -29,7 +29,7 @@ const projectsData = [
   {
     title: 'Travel Touring Guide',
     description: 'A web platform for visitors to discover travel destinations, search for hotels, book car rentals, and plan their entire itinerary seamlessly.',
-    image: '/projects/traveltouring.jpg',
+    image: '/projects/traveltouring.png',
     stack: ['React', 'Node.js', 'PostgreSQL', 'Express'],
     liveLink: '#',
     githubLink: 'https://github.com/Degaga-Emiru/Travel-Booking-API',
