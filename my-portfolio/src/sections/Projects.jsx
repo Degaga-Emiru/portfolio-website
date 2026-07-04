@@ -7,10 +7,10 @@ const projectsData = [
   {
     title: 'Justice Hub Project',
     description: 'A comprehensive full-stack system developed for the Hawassa primary courts to digitize and manage court proceedings, case files, and scheduling.',
-    image: '/projects/justicehub.jpg',
+    image: '/projects/justicehub.png',
     stack: ['Python', 'Django', 'Next.js', 'React'],
-    liveLink: '#',
-    githubLink: '#',
+    liveLink: 'https://justicehub-beige.vercel.app/',
+    githubLink: 'https://github.com/Degaga-Emiru/justicehub',
     problemSolved: 'Streamlined court processes, reducing paper waste and manual errors. Improved access to case information for all authorized parties.',
     architecture: 'Microservices architecture with a Django REST API for the backend and a fast, SSR Next.js application for the frontend interface.',
     actors: 'Judges, Court Clerks, Lawyers, Citizens'
@@ -21,7 +21,7 @@ const projectsData = [
     image: '/projects/unifix.jpg',
     stack: ['React Native', 'Node.js', 'Express', 'MongoDB'],
     liveLink: '#',
-    githubLink: '#',
+    githubLink: 'https://github.com/Degaga-Emiru/Unifix-Mobile-app',
     problemSolved: 'Eliminated the slow, paper-based maintenance request system. Increased transparency and reduced average fix times for dorm issues.',
     architecture: 'Mobile-first client application communicating with a centralized Node.js/Express API, using MongoDB for scalable document storage.',
     actors: 'Students, Maintenance Staff, Dorm Administrators'
@@ -32,7 +32,7 @@ const projectsData = [
     image: '/projects/traveltouring.jpg',
     stack: ['React', 'Node.js', 'PostgreSQL', 'Express'],
     liveLink: '#',
-    githubLink: '#',
+    githubLink: 'https://github.com/Degaga-Emiru/Travel-Booking-API',
     problemSolved: 'Fragmented travel booking. Brought hotel, car, and location discovery into a single unified search experience.',
     architecture: 'React SPA frontend with a Node.js API layer. PostgreSQL relational database ensures ACID compliance for booking transactions.',
     actors: 'Tourists, Travel Agents, Hotel Owners'
@@ -54,7 +54,7 @@ const projectsData = [
     image: '/projects/ecommerce.jpeg',
     stack: ['React', 'Node.js', 'TypeScript', 'MongoDB'],
     liveLink: '#',
-    githubLink: '#',
+    githubLink: 'https://github.com/Degaga-Emiru/e-commerce',
     problemSolved: 'Providing a scalable digital storefront for small businesses.',
     architecture: 'MERN Stack with TypeScript for type safety.',
     actors: 'Customers, Store Owners'
