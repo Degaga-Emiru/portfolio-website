@@ -4,7 +4,7 @@ import Typewriter from '../components/Typewriter';
 import { Link } from 'react-scroll';
 import { FiGithub, FiMail } from 'react-icons/fi';
 import { FaTelegramPlane } from 'react-icons/fa';
-import resume from '../assets/Degaga_Emiru_resume.pdf';
+import resume from '../assets/Degaga_Emiru_Resume.pdf';
 import profileImage from '../assets/images/profile.jpg'; // adjust path based on your file location
 
 const Homes = () => {
@@ -26,7 +26,7 @@ const Homes = () => {
             <Typewriter words={professions} />
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 mb-8">
-            I am a Computer Science student, web designer, and full-stack developer with a passion for building modern, responsive, 
+            I am a Recent Computer Science Graduate, web designer, and full-stack developer with a passion for building modern, responsive, 
             and AI-powered websites. I specialize in creating dynamic user experiences and solving real-world problems through clean, 
             efficient code and seamless UI/UX design. My skillset spans both front-end and back-end development, as well as networking fundamentals. 
             I’m always eager to collaborate and help bring your ideas to life with scalable, high-performance web solutions. 
@@ -46,7 +46,7 @@ const Homes = () => {
             </Link>
             <a
               href={resume}
-              download="Degaga_Emiru_resume.pdf"
+              download="Degaga_Emiru_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-3 border-2 border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark rounded-lg hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark dark:hover:text-white hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out font-medium"

@@ -6,9 +6,9 @@ import ProjectModal from '../components/ProjectModal';
 const projectsData = [
   {
     title: 'Elgibbor Trading Website',
-    description: 'A professional business website for Elgibbor Import Export company, showcasing their products, services, and corporate identity.',
+    description: 'A professional full-stack business website for Elgibbor Import Export company, showcasing their products, services, and corporate identity with a robust backend.',
     image: '/projects/elgibbor1.png',
-    stack: ['React', 'Tailwind CSS', 'JavaScript'],
+    stack: ['React', 'Tailwind CSS', 'JavaScript', 'Supabase'],
     liveLink: 'https://www.elgibborimportexport.com/',
     githubLink: 'https://github.com/Degaga-Emiru/el-gibbor-trading-website',
     problemSolved: 'Established a strong digital presence for the company to attract international partners and showcase export/import capabilities.',
