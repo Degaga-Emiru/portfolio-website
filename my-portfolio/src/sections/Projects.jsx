@@ -5,6 +5,17 @@ import ProjectModal from '../components/ProjectModal';
 
 const projectsData = [
   {
+    title: 'Elgibbor Trading Website',
+    description: 'A professional business website for Elgibbor Import Export company, showcasing their products, services, and corporate identity.',
+    image: '/projects/elgibbor1.png',
+    stack: ['React', 'Tailwind CSS', 'JavaScript'],
+    liveLink: 'https://www.elgibborimportexport.com/',
+    githubLink: 'https://github.com/Degaga-Emiru/el-gibbor-trading-website',
+    problemSolved: 'Established a strong digital presence for the company to attract international partners and showcase export/import capabilities.',
+    architecture: 'Modern web application with responsive design and interactive elements.',
+    actors: 'Clients, Business Partners, Investors'
+  },
+  {
     title: 'Justice Hub Project',
     description: 'A comprehensive full-stack system developed for the Hawassa primary courts to digitize and manage court proceedings, case files, and scheduling.',
     image: '/projects/justicehub.png',
