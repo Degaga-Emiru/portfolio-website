@@ -39,8 +39,8 @@ function App() {
         <main>
           <Homes />
           <About />
-          <Skills />
           <Experience />
+          <Skills />
           <Services />
           <Projects />
           <Blog />

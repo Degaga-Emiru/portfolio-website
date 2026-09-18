@@ -1,37 +1,94 @@
 import { motion } from 'framer-motion';
-import { FiBriefcase, FiBookOpen, FiCalendar } from 'react-icons/fi';
+import {
+  FiBriefcase,
+  FiCalendar,
+  FiMapPin,
+  FiCode,
+  FiLayers,
+  FiServer,
+  FiDatabase,
+  FiLock,
+  FiUserCheck,
+  FiSearch,
+  FiCreditCard,
+  FiBookOpen,
+  FiSend,
+  FiCheckCircle,
+  FiFolder,
+  FiCpu
+} from 'react-icons/fi';
 
 const Experience = () => {
   const experiences = [
     {
-      type: 'education',
-      title: 'BSc Computer Science',
-      organization: 'Hawassa University',
-      date: '2023 - Present',
-      description: 'Studying core computer science fundamentals, including data structures, algorithms, networking, and software engineering principles. Active in programming clubs and project-based learning.',
-      icon: <FiBookOpen className="text-white" size={20} />
+      company: 'Tech Vision',
+      role: 'Backend Developer Intern',
+      period: '2026',
+      location: 'Ethiopia',
+      badgeColor: 'from-blue-500 to-indigo-600',
+      summary: 'Contributed to backend development and participated in the design and implementation of software projects during my internship at Tech Vision.',
+      projects: [
+        {
+          name: 'Learning Management System (LMS)',
+          icon: <FiBookOpen className="text-blue-500" size={18} />,
+          description: 'Contributed to the development of an LMS using Frappe Framework, focusing on backend functionality, database models, APIs, and system features.',
+          highlights: [
+            { text: 'Backend API & business logic implementation', icon: <FiServer className="text-blue-500" size={14} /> },
+            { text: 'Frappe Framework & ERPNext customization', icon: <FiLayers className="text-blue-500" size={14} /> },
+            { text: 'Database modeling with MariaDB', icon: <FiDatabase className="text-blue-500" size={14} /> },
+          ],
+          techStack: ['Python', 'Frappe Framework', 'ERPNext', 'MariaDB', 'REST API', 'JavaScript']
+        },
+        {
+          name: 'TeleBot — Telegram Reverse Employment Marketplace',
+          icon: <FiSend className="text-emerald-500" size={18} />,
+          description: 'Contributed to an innovative Telegram-native reverse employment marketplace for Ethiopia enabling candidate discovery based on verified skills and credentials.',
+          highlights: [
+            { text: 'Backend architecture & API development', icon: <FiServer className="text-emerald-500" size={14} /> },
+            { text: 'Authentication & user registration', icon: <FiLock className="text-emerald-500" size={14} /> },
+            { text: 'Employee & employer profile management', icon: <FiUserCheck className="text-emerald-500" size={14} /> },
+            { text: 'Candidate discovery & skill filtering', icon: <FiSearch className="text-emerald-500" size={14} /> },
+            { text: 'Hiring workflow & business logic', icon: <FiCpu className="text-emerald-500" size={14} /> },
+            { text: 'Database models & API integration', icon: <FiDatabase className="text-emerald-500" size={14} /> },
+            { text: 'Chapa payment functionality integration', icon: <FiCreditCard className="text-emerald-500" size={14} /> },
+          ],
+          techStack: [
+            'Python', 'FastAPI', 'PostgreSQL', 'SQLAlchemy', 'Alembic', 'Redis',
+            'Celery', 'React', 'TypeScript', 'Tailwind CSS', 'Telegram Bot API',
+            'Telegram Mini Apps', 'Chapa', 'Docker'
+          ]
+        }
+      ]
     },
     {
-      type: 'education',
-      title: 'Frontend Engineering Program',
-      organization: 'ALX Africa',
-      date: '2024 - 2025',
-      description: 'Intensive software engineering program focusing on modern frontend technologies. Built real-world applications using React, JavaScript, and Tailwind CSS. Emphasized professional collaboration and Agile methodologies.',
-      icon: <FiBookOpen className="text-white" size={20} />
-    },
-    {
-      type: 'work',
-      title: 'Full Stack Web Developer (Freelance)',
-      organization: 'Self-Employed',
-      date: '2024 - Present',
-      description: 'Developing dynamic, responsive websites and web applications for clients. Utilizing modern stacks including React, Node.js, and Django to deliver scalable solutions tailored to client needs.',
-      icon: <FiBriefcase className="text-white" size={20} />
+      company: 'DX Valley',
+      role: 'Backend Developer Intern',
+      period: '2025–2026',
+      location: 'Ethiopia',
+      badgeColor: 'from-purple-500 to-pink-600',
+      summary: 'Contributed to backend development and system implementation as part of the internship program.',
+      projects: [
+        {
+          name: 'Loan Management System',
+          icon: <FiCreditCard className="text-purple-500" size={18} />,
+          description: 'Contributed to the development of a Loan Management System, working on backend services and integration with the frontend.',
+          highlights: [
+            { text: 'Developed backend APIs using Spring Boot', icon: <FiServer className="text-purple-500" size={14} /> },
+            { text: 'Implemented business logic & backend services', icon: <FiCpu className="text-purple-500" size={14} /> },
+            { text: 'PostgreSQL database design & persistence', icon: <FiDatabase className="text-purple-500" size={14} /> },
+            { text: 'Integrated APIs with React & TypeScript frontend', icon: <FiCode className="text-purple-500" size={14} /> },
+            { text: 'Testing, debugging & team collaboration', icon: <FiCheckCircle className="text-purple-500" size={14} /> },
+          ],
+          techStack: ['Java', 'Spring Boot', 'React', 'TypeScript', 'PostgreSQL', 'REST API']
+        }
+      ]
     }
   ];
 
   return (
-    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
+    <section id="experience" className="py-20 bg-gray-50 dark:bg-gray-800/60 transition-colors duration-300">
       <div className="container mx-auto px-6 max-w-5xl">
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -39,58 +96,127 @@ const Experience = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
+          <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-primary-light/10 text-primary-light dark:bg-primary-dark/10 dark:text-primary-dark mb-4">
+            <FiBriefcase className="w-4 h-4" /> CAREER & EXPERIENCE
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 dark:text-white">
-            Experience & <span className="text-primary-light dark:text-primary-dark">Education</span>
+            💼 Work <span className="text-primary-light dark:text-primary-dark">Experience</span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            My professional journey and academic background. A timeline of how I've built my foundation in software engineering.
+            Hands-on software development internships focusing on backend architecture, database systems, APIs, and real-world web solutions.
           </p>
         </motion.div>
 
-        <div className="relative border-l-4 border-gray-200 dark:border-gray-700 ml-3 md:ml-6 lg:ml-1/2 lg:left-1/2 lg:-translate-x-1/2">
-          {experiences.map((item, index) => {
-            const isEven = index % 2 === 0;
-            return (
-              <motion.div 
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true, margin: "-50px" }}
-                className={`mb-12 relative flex items-center w-full ${isEven ? 'lg:justify-start' : 'lg:justify-end'}`}
-              >
-                {/* Timeline Dot with Icon */}
-                <div className="absolute left-[-22px] lg:left-1/2 lg:-translate-x-1/2 w-10 h-10 rounded-full bg-primary-light dark:bg-primary-dark border-4 border-gray-50 dark:border-gray-900 flex items-center justify-center shadow-lg z-10">
-                  {item.icon}
-                </div>
+        {/* Timeline List */}
+        <div className="relative border-l-2 border-primary-light/30 dark:border-primary-dark/30 ml-4 md:ml-8 space-y-12">
+          {experiences.map((exp, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="relative pl-6 md:pl-10"
+            >
+              {/* Timeline Icon Node */}
+              <div className={`absolute -left-[17px] top-1 w-8 h-8 rounded-full bg-gradient-to-r ${exp.badgeColor} flex items-center justify-center text-white shadow-md ring-4 ring-gray-50 dark:ring-gray-800`}>
+                <FiBriefcase size={14} />
+              </div>
 
-                {/* Content Box */}
-                <div className={`w-full ml-10 lg:ml-0 lg:w-5/12 ${isEven ? 'lg:pr-12' : 'lg:pl-12'}`}>
-                  <div className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow relative">
-                    {/* Arrow for Desktop */}
-                    <div className={`hidden lg:block absolute top-6 w-0 h-0 border-y-8 border-y-transparent ${isEven ? 'right-[-8px] border-l-8 border-l-white dark:border-l-gray-800' : 'left-[-8px] border-r-8 border-r-white dark:border-r-gray-800'}`}></div>
-                    
-                    {/* Arrow for Mobile */}
-                    <div className="block lg:hidden absolute top-6 left-[-8px] w-0 h-0 border-y-8 border-y-transparent border-r-8 border-r-white dark:border-r-gray-800"></div>
-
-                    <span className="flex items-center text-sm font-semibold text-primary-light dark:text-primary-dark mb-2">
-                      <FiCalendar className="mr-2" />
-                      {item.date}
-                    </span>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
-                      {item.title}
+              {/* Main Company Card */}
+              <div className="bg-white dark:bg-gray-900 rounded-2xl p-6 md:p-8 shadow-md border border-gray-100 dark:border-gray-700/80 hover:shadow-lg transition-shadow">
+                {/* Header Row: Role & Badges */}
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4 pb-4 border-b border-gray-100 dark:border-gray-800">
+                  <div>
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                      {exp.role}
+                      <span className="text-gray-400 font-normal">@</span>
+                      <span className="text-primary-light dark:text-primary-dark">{exp.company}</span>
                     </h3>
-                    <h4 className="text-md font-medium text-gray-600 dark:text-gray-300 mb-4">
-                      {item.organization}
-                    </h4>
-                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                      {item.description}
-                    </p>
+                  </div>
+
+                  <div className="flex flex-wrap items-center gap-2.5 text-xs font-medium text-gray-600 dark:text-gray-400">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                      <FiCalendar className="text-primary-light dark:text-primary-dark" size={12} />
+                      {exp.period}
+                    </span>
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
+                      <FiMapPin className="text-emerald-500" size={12} />
+                      {exp.location}
+                    </span>
                   </div>
                 </div>
-              </motion.div>
-            );
-          })}
+
+                {/* Company Overview */}
+                <p className="text-gray-600 dark:text-gray-300 text-sm md:text-base leading-relaxed mb-6">
+                  {exp.summary}
+                </p>
+
+                {/* Projects Section */}
+                <div className="space-y-6">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-gray-500 flex items-center gap-1.5">
+                    <FiFolder size={14} /> Featured Projects
+                  </h4>
+
+                  <div className="grid grid-cols-1 gap-6">
+                    {exp.projects.map((proj, pIdx) => (
+                      <div
+                        key={pIdx}
+                        className="bg-gray-50/80 dark:bg-gray-800/50 rounded-xl p-5 border border-gray-200/80 dark:border-gray-700/60 hover:border-primary-light/40 dark:hover:border-primary-dark/40 transition-colors"
+                      >
+                        {/* Project Name */}
+                        <div className="flex items-center gap-2 mb-2">
+                          {proj.icon}
+                          <h5 className="text-lg font-bold text-gray-900 dark:text-white">
+                            {proj.name}
+                          </h5>
+                        </div>
+
+                        {/* Project Description */}
+                        <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
+                          {proj.description}
+                        </p>
+
+                        {/* Highlights Grid */}
+                        {proj.highlights && proj.highlights.length > 0 && (
+                          <div className="mb-4">
+                            <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 block">
+                              Key Contributions:
+                            </span>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                              {proj.highlights.map((hl, hIdx) => (
+                                <div key={hIdx} className="flex items-start gap-2 text-xs text-gray-700 dark:text-gray-300">
+                                  <span className="mt-0.5 shrink-0">{hl.icon}</span>
+                                  <span>{hl.text}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Tech Stack Pills */}
+                        <div>
+                          <span className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-2 block">
+                            Tech Stack:
+                          </span>
+                          <div className="flex flex-wrap gap-1.5">
+                            {proj.techStack.map((tech, tIdx) => (
+                              <span
+                                key={tIdx}
+                                className="px-2.5 py-1 text-xs font-medium rounded-md bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700/80 hover:border-primary-light dark:hover:border-primary-dark transition-colors"
+                              >
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
@@ -98,3 +224,4 @@ const Experience = () => {
 };
 
 export default Experience;
+

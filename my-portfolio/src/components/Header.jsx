@@ -11,8 +11,8 @@ import logo from '../assets/logo.jpg'; // adjust path as needed
 const navLinks = [
   { name: 'Home', to: 'home' },
   { name: 'About', to: 'about' },
-  { name: 'Skills', to: 'skills' },
   { name: 'Experience', to: 'experience' },
+  { name: 'Skills', to: 'skills' },
   { name: 'Services', to: 'services' },
   { name: 'Projects', to: 'projects' },
   { name: 'Blog', to: 'blog' },
