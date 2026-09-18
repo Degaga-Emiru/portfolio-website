@@ -2,9 +2,8 @@
 import { motion } from 'framer-motion';
 import Typewriter from '../components/Typewriter';
 import { Link } from 'react-scroll';
-import { FiGithub, FiMail } from 'react-icons/fi';
+import { FiGithub, FiMail, FiDownload } from 'react-icons/fi';
 import { FaTelegramPlane } from 'react-icons/fa';
-import resume from '../assets/Degaga_Emiru_Resume.pdf';
 import profileImage from '../assets/images/profile.jpg'; // adjust path based on your file location
 
 const Homes = () => {
@@ -45,13 +44,11 @@ const Homes = () => {
               Hire Me
             </Link>
             <a
-              href={resume}
+              href="/Degaga_Emiru_Resume.pdf"
               download="Degaga_Emiru_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-3 border-2 border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark rounded-lg hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark dark:hover:text-white hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out font-medium"
+              className="px-8 py-3 border-2 border-primary-light dark:border-primary-dark text-primary-light dark:text-primary-dark rounded-lg hover:bg-primary-light hover:text-white dark:hover:bg-primary-dark dark:hover:text-white hover:-translate-y-1 hover:shadow-lg transition-all duration-300 ease-in-out font-medium inline-flex items-center gap-2"
             >
-              Download Resume
+              <FiDownload size={18} /> Download Resume
             </a>
           </div>
 
